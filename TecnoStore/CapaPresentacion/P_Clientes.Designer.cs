@@ -68,6 +68,9 @@
             this.DtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.MtbTelefono = new System.Windows.Forms.MaskedTextBox();
             this.MtbCedula = new System.Windows.Forms.MaskedTextBox();
+            this.BtnCancelarCobro = new System.Windows.Forms.Button();
+            this.BtnGuardarCliente = new System.Windows.Forms.Button();
+            this.BtnCalcularDeuda = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -84,9 +87,6 @@
             this.DtvClientes = new System.Windows.Forms.DataGridView();
             this.DtvCliente2 = new System.Windows.Forms.DataGridView();
             this.DtvDeuda = new System.Windows.Forms.DataGridView();
-            this.BtnCancelarCobro = new System.Windows.Forms.Button();
-            this.BtnGuardarCliente = new System.Windows.Forms.Button();
-            this.BtnCalcularDeuda = new System.Windows.Forms.Button();
             this.BtnCobrar = new System.Windows.Forms.Button();
             this.BtnDeudores = new System.Windows.Forms.Button();
             this.BtnClientes = new System.Windows.Forms.Button();
@@ -485,6 +485,74 @@
             this.MtbCedula.MouseClick += new System.Windows.Forms.MouseEventHandler(this.MtbCedula_MouseClick);
             this.MtbCedula.Enter += new System.EventHandler(this.MtbCedula_Enter);
             // 
+            // BtnCancelarCobro
+            // 
+            this.BtnCancelarCobro.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.BtnCancelarCobro.BackColor = System.Drawing.Color.Orange;
+            this.BtnCancelarCobro.FlatAppearance.BorderSize = 0;
+            this.BtnCancelarCobro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.BtnCancelarCobro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.BtnCancelarCobro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCancelarCobro.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancelarCobro.ForeColor = System.Drawing.Color.Black;
+            this.BtnCancelarCobro.Image = global::CapaPresentacion.Properties.Resources.cancelar;
+            this.BtnCancelarCobro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnCancelarCobro.Location = new System.Drawing.Point(543, 363);
+            this.BtnCancelarCobro.Name = "BtnCancelarCobro";
+            this.BtnCancelarCobro.Size = new System.Drawing.Size(160, 35);
+            this.BtnCancelarCobro.TabIndex = 23;
+            this.BtnCancelarCobro.TabStop = false;
+            this.BtnCancelarCobro.Text = "CANCELAR";
+            this.BtnCancelarCobro.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnCancelarCobro.UseVisualStyleBackColor = false;
+            this.BtnCancelarCobro.Visible = false;
+            this.BtnCancelarCobro.Click += new System.EventHandler(this.BtnCancelarCobro_Click);
+            // 
+            // BtnGuardarCliente
+            // 
+            this.BtnGuardarCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnGuardarCliente.BackColor = System.Drawing.Color.DodgerBlue;
+            this.BtnGuardarCliente.FlatAppearance.BorderSize = 0;
+            this.BtnGuardarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.BtnGuardarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnGuardarCliente.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGuardarCliente.ForeColor = System.Drawing.Color.Black;
+            this.BtnGuardarCliente.Image = global::CapaPresentacion.Properties.Resources.guardar;
+            this.BtnGuardarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnGuardarCliente.Location = new System.Drawing.Point(719, 363);
+            this.BtnGuardarCliente.Name = "BtnGuardarCliente";
+            this.BtnGuardarCliente.Size = new System.Drawing.Size(150, 35);
+            this.BtnGuardarCliente.TabIndex = 17;
+            this.BtnGuardarCliente.TabStop = false;
+            this.BtnGuardarCliente.Text = "GUARDAR";
+            this.BtnGuardarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnGuardarCliente.UseVisualStyleBackColor = false;
+            this.BtnGuardarCliente.Visible = false;
+            this.BtnGuardarCliente.Click += new System.EventHandler(this.BtnGuardarCliente_Click);
+            // 
+            // BtnCalcularDeuda
+            // 
+            this.BtnCalcularDeuda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnCalcularDeuda.BackColor = System.Drawing.Color.Lime;
+            this.BtnCalcularDeuda.FlatAppearance.BorderSize = 0;
+            this.BtnCalcularDeuda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.BtnCalcularDeuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCalcularDeuda.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCalcularDeuda.ForeColor = System.Drawing.Color.Black;
+            this.BtnCalcularDeuda.Image = global::CapaPresentacion.Properties.Resources.calculadora;
+            this.BtnCalcularDeuda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnCalcularDeuda.Location = new System.Drawing.Point(687, 226);
+            this.BtnCalcularDeuda.Name = "BtnCalcularDeuda";
+            this.BtnCalcularDeuda.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.BtnCalcularDeuda.Size = new System.Drawing.Size(130, 35);
+            this.BtnCalcularDeuda.TabIndex = 26;
+            this.BtnCalcularDeuda.TabStop = false;
+            this.BtnCalcularDeuda.Text = "PAGAR";
+            this.BtnCalcularDeuda.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnCalcularDeuda.UseVisualStyleBackColor = false;
+            this.BtnCalcularDeuda.Visible = false;
+            this.BtnCalcularDeuda.Click += new System.EventHandler(this.BtnCalcularDeuda_Click);
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -815,74 +883,6 @@
             this.DtvDeuda.TabStop = false;
             this.DtvDeuda.Visible = false;
             // 
-            // BtnCancelarCobro
-            // 
-            this.BtnCancelarCobro.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.BtnCancelarCobro.BackColor = System.Drawing.Color.Orange;
-            this.BtnCancelarCobro.FlatAppearance.BorderSize = 0;
-            this.BtnCancelarCobro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.BtnCancelarCobro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.BtnCancelarCobro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCancelarCobro.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCancelarCobro.ForeColor = System.Drawing.Color.Black;
-            this.BtnCancelarCobro.Image = global::CapaPresentacion.Properties.Resources.cancelar;
-            this.BtnCancelarCobro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCancelarCobro.Location = new System.Drawing.Point(543, 363);
-            this.BtnCancelarCobro.Name = "BtnCancelarCobro";
-            this.BtnCancelarCobro.Size = new System.Drawing.Size(160, 35);
-            this.BtnCancelarCobro.TabIndex = 23;
-            this.BtnCancelarCobro.TabStop = false;
-            this.BtnCancelarCobro.Text = "CANCELAR";
-            this.BtnCancelarCobro.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnCancelarCobro.UseVisualStyleBackColor = false;
-            this.BtnCancelarCobro.Visible = false;
-            this.BtnCancelarCobro.Click += new System.EventHandler(this.BtnCancelarCobro_Click);
-            // 
-            // BtnGuardarCliente
-            // 
-            this.BtnGuardarCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnGuardarCliente.BackColor = System.Drawing.Color.DodgerBlue;
-            this.BtnGuardarCliente.FlatAppearance.BorderSize = 0;
-            this.BtnGuardarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.BtnGuardarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnGuardarCliente.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnGuardarCliente.ForeColor = System.Drawing.Color.Black;
-            this.BtnGuardarCliente.Image = global::CapaPresentacion.Properties.Resources.guardar;
-            this.BtnGuardarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnGuardarCliente.Location = new System.Drawing.Point(719, 363);
-            this.BtnGuardarCliente.Name = "BtnGuardarCliente";
-            this.BtnGuardarCliente.Size = new System.Drawing.Size(150, 35);
-            this.BtnGuardarCliente.TabIndex = 17;
-            this.BtnGuardarCliente.TabStop = false;
-            this.BtnGuardarCliente.Text = "GUARDAR";
-            this.BtnGuardarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnGuardarCliente.UseVisualStyleBackColor = false;
-            this.BtnGuardarCliente.Visible = false;
-            this.BtnGuardarCliente.Click += new System.EventHandler(this.BtnGuardarCliente_Click);
-            // 
-            // BtnCalcularDeuda
-            // 
-            this.BtnCalcularDeuda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnCalcularDeuda.BackColor = System.Drawing.Color.Lime;
-            this.BtnCalcularDeuda.FlatAppearance.BorderSize = 0;
-            this.BtnCalcularDeuda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.BtnCalcularDeuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCalcularDeuda.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCalcularDeuda.ForeColor = System.Drawing.Color.Black;
-            this.BtnCalcularDeuda.Image = global::CapaPresentacion.Properties.Resources.calculadora;
-            this.BtnCalcularDeuda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCalcularDeuda.Location = new System.Drawing.Point(687, 226);
-            this.BtnCalcularDeuda.Name = "BtnCalcularDeuda";
-            this.BtnCalcularDeuda.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.BtnCalcularDeuda.Size = new System.Drawing.Size(130, 35);
-            this.BtnCalcularDeuda.TabIndex = 26;
-            this.BtnCalcularDeuda.TabStop = false;
-            this.BtnCalcularDeuda.Text = "PAGAR";
-            this.BtnCalcularDeuda.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnCalcularDeuda.UseVisualStyleBackColor = false;
-            this.BtnCalcularDeuda.Visible = false;
-            this.BtnCalcularDeuda.Click += new System.EventHandler(this.BtnCalcularDeuda_Click);
-            // 
             // BtnCobrar
             // 
             this.BtnCobrar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -1052,6 +1052,9 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = global::CapaPresentacion.Properties.Resources.Capture;
             this.pictureBox2.Location = new System.Drawing.Point(898, 167);
             this.pictureBox2.Name = "pictureBox2";
